@@ -6,3 +6,33 @@
 
     }
 }
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+//MEDUA query manager
+/*
+0-600 is the phone
+600-900 is the tablet in portrait
+900-1200 was portrait mode in landscape
+1800+ weh ad big desktop
+order base+typograph> general layout + grid > page layout >components
+*/
+
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em) {@content}; //600px
+    }
+    @if $breakpoint == tab-port{
+        @media (max-width: 56.25em) {@content}; //900px
+    }
+    @if $breakpoint == tab-land{
+        @media (max-width: 75em) {@content};//1200px
+    }
+    @if $breakpoint == big-desktop{
+        @media (min-width: 112.5em) {@content}; //1800
+    }
+}
