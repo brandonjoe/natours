@@ -3,6 +3,14 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+    @include respond(tab-land){
+        margin-bottom: -20rem;
+    }
+    @include respond(tab-port){
+        padding: 20rem 0;
+        
+    }
+    
 }
 .section-features{
     padding: 20rem 0;
@@ -14,22 +22,34 @@
     background-size: cover;
     -webkit-clip-path: polygon(100% 0, 100% 80%, 0 100%, 20%);
     clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 20%);
-    margin-top: -20rem;
+
+    @include respond(tab-port){
+        padding: 15rem 0;
+        -webkit-clip-path: polygon(100% 0, 100% 80%, 0 100%, 20%);
+    clip-path: polygon(100% 0, 100% 90%, 0 100%, 0 10%);
+    }
+    
 }
 .section-tours{
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin-top: -20rem;
+    @include respond(tab-port){
+        padding: 20rem 0 10rem 0;
+    }
 }
 .section-stories{
     margin-top: 0rem;
     padding: 15rem 0;
     position: relative;
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
 }
 .section-book{
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-
+    
 }
 .book{
     background-image: linear-gradient( 105deg, 
@@ -37,14 +57,34 @@
     rgba(white, .9) 50%,
         transparent 50%) ,
       url(../img/nat-10.jpg);
-    background-size: cover;
+    background-size: 100%;
     border-radius: .3rem;
     box-shadow: 0 1.5rem 4rem rgba(black, .6);
 
-    height: 50rem;
 
+
+    @include respond(tab-land){
+        background-image: linear-gradient( 105deg, 
+        rgba(white, .9) 0%,
+        rgba(white, .9) 65%,
+        transparent 65%) ,
+        url(../img/nat-10.jpg);
+        background-size: cover;
+    }
+    @include respond(tab-port){
+        background-image: linear-gradient( to right, 
+        rgba(white, .9) 0%,
+        rgba(white, .9) 100%) ,
+        url(../img/nat-10.jpg);
+    }
     &__form{
         width: 50%;
         padding: 6rem;
+        @include respond(tab-land){
+            width: 65%;
+        }
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 }

@@ -38,6 +38,22 @@
                   "foreground": "#CFD679"
                 }
               },
+              {
+                "name": "[CSS] - units",
+                "scope": [
+                  "keyword.other.unit.px.css",
+                  "keyword.other.unit.percentage.css",
+                  "constant.other.color.rgb-value.hex.css",
+                  "keyword.other.unit.ms.css",
+                  "keyword.other.unit.s.css",
+                  "keyword.other.unit.vh.css",
+                  "keyword.other.unit.vw.css",
+                  "keyword.other.unit.deg.css"
+                ],
+                "settings": {
+                  "foreground": "#5ec4ff"
+                }
+              },
               
          ]
     }  
