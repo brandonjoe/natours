@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "Landing page for natours",
   "main": "index.js",
+  "homepage": "https://brandonjoe.github.io/natours/",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css"
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "deploy": "gh-pages -d master"
   },
   "author": "Brandon Joe",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.10.0",
     "nodemon": "^1.18.6"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
